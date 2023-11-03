@@ -96,15 +96,17 @@ console.log(`all person salary are
 "Person3":${Person3.salary}`);
 
 // 4.Write a calculate the uber price:-
-class Uber{
-    constructor(price,Km){
+class UberPrice{
+    constructor(Km,price=50){
         this.price=price;
         this.Km=Km;
     }
     
-    get priceUber(){
-        return this.price*this.Km;
+    get Price(){
+        return this.Km*this.price;
     }
 }
-const uber1=new Uber(50,5);
-console.log(uber1.priceUber);
+const uber1=new UberPrice(5);
+const uber2=new UberPrice(5,20)
+console.log(uber1.Price);
+console.log(uber2.Price);
